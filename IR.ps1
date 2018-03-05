@@ -94,6 +94,7 @@ function Show-IR_psf {
 	
 	$radiobuttonEventLogs_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_ntlogevent -filter "logfile = 'System'" -ComputerName $computers | select -first 460 | Export-CSV .\Eventlogs-System.csv -NoTypeInformation
 		Get-WmiObject -Class win32_ntlogevent -filter "logfile = 'Security'" -ComputerName $computers | select -first 460 | Export-CSV .\Eventlogs-Security.csv -NoTypeInformation
 		Get-WmiObject -Class win32_ntlogevent -filter "logfile = 'Application'" -ComputerName $computers | select -first 460 | Export-CSV .\Eventlogs-Application.csv -NoTypeInformation

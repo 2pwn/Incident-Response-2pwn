@@ -1,1 +1,5 @@
-
+Run with highest domain privilage
+Enter end user IP or HOSTNAME that you to collect logs
+You can fetch all types of logs just clicking on single button "All Types Of Logs"
+You can collect specific log just clicking on radio button for which type of logs required
+# output is stored on current directory where script is presented 

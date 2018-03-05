@@ -109,83 +109,97 @@ function Show-IR_psf {
 	
 	$radiobuttonNetlogon_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_networkloginprofile -ComputerName $computers | select PSComputername, Name, LastLogon, LastLogoff, NumberOfLogons, PasswordAge | Export-CSV .\NetLogon.csv -NoTypeInformation
 		
 	}
 	
 	$radiobuttonDrivers_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_systemdriver -ComputerName $computers | select PSComputername, Name, InstallDate, DisplayName, PathName, State, StartMode | Export-CSV .\Drivers.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonMapped_Drives_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_mappedlogicaldisk -ComputerName $computers | select PSComputername, Name, ProviderName | Export-CSV .\Mapped_Drives.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonProcesses_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_process -ComputerName $computers | select PSComputername, Name, Description, ProcessID, ParentProcessID, Handle, HandleCount, ThreadCount, CreationDate | Export-CSV .\Processes.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonScheduled_Tasks_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_scheduledjob -ComputerName $computers | select PSComputername, Name, Owner, JodID, Command, RunRepeatedly, InteractWithDesktop | Export-CSV .\Scheduled_Tasks.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonServices_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_service -ComputerName $computers | select PSComputername, ProcessID, Name, Description, PathName, Started, StartMode, StartName, State | Export-CSV .\Services.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonEnvironment_Variables_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_environment -ComputerName $computers | select PSComputername, UserName, Name, VariableValue | Export-CSV .\Environment_Variables.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonUsers_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_useraccount -ComputerName $computers | select PSComputername, accounttype, name, fullname, domain, disabled, localaccount, lockout, passwordchangeable, passwordexpires, sid | Export-CSV .\Users.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonGroups_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_group -ComputerName $computers |select PSComputername, Caption, Domain, Name, Sid | Export-CSV .\Groups.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonLogged_on_User_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_computersystem -ComputerName $computers | select PSComputername, Username | Export-CSV .\Logged_on_User.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonNetwork_Configs_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_networkadapterconfiguration -ComputerName $computers | select PSComputername, IPAddress, IPSubnet, DefaultIPGateway, DHCPServer, DNSHostname, DNSserversearchorder, MACAddress, description| Export-CSV .\Network_Configs.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonShares_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_share -ComputerName $computers |select PSComputername, Name, Path, Description | Export-CSV .\Shares.csv -NoTypeInformation
 
 	}
 	$radiobuttonDisk_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_logicaldisk -ComputerName $computers | select PSComputername, DeviceID, Description, ProviderName | Export-CSV .\Disk.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonSystem_Info_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_computersystem -ComputerName $computers | select PSComputername, Domain, Model, Manufacturer, EnableDaylightSavingsTime, PartOfDomain, Roles, SystemType, NumberOfProcessors, TotalPhysicalMemory, Username | Export-CSV .\System_Info.csv -NoTypeInformation
 
 	}
@@ -194,12 +208,14 @@ function Show-IR_psf {
 
 	$radiobuttonPatches_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_quickfixengineering -ComputerName $computers | select PSComputername, HotFixID, Description, InstalledBy, InstalledOn | Export-CSV .\Patches.csv -NoTypeInformation
 
 	}
 
 	$radiobuttonSoftware_CheckedChanged={
 		#TODO: Place custom script here
+		$computers = $textbox1.Text
 		Get-WmiObject -Class win32_product -ComputerName $computers | select PSComputername, Name, PackageCache, Vendor, Version, IdentifyingNumber | Export-CSV .\Software.csv -NoTypeInformation
 
 	}

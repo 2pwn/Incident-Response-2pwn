@@ -1,7 +1,11 @@
-﻿
-# Source File: IR.psf
+# Incident-Response-Investigator
+##############################
+#                            #
+# Pawan Pal		     #
+#                            #
+##############################
 #------------------------------------------------------------------------
-# created by Pawan
+
 
 function Show-IR_psf {
 
@@ -222,13 +226,6 @@ function Show-IR_psf {
 
 	}
 
-	$buttonRUN_Click={
-		#TODO: Place custom script here
-		$radiobuttonAutoruns.Checked = $true
-		$radiobuttonNetlogon.Checked = $true
-		$radiobuttonEventLogs.Checked = $true
-		}
-	
 	# --End User Generated Script--
 	#----------------------------------------------
 	#region Generated Events
@@ -295,25 +292,12 @@ function Show-IR_psf {
 	$form1.add_Load($form1_Load)
 
 	$Label.Location= '300, 250'
-	#
-	# buttonRUN
-	#
-	#$buttonRUN.Location = '275, 192'
-	#$buttonRUN.Name = 'buttonRUN'
-	#$buttonRUN.Size = '75, 23'
-	#$buttonRUN.TabIndex = 5
-	#$buttonRUN.Text = 'RUN'
-	#$buttonRUN.UseCompatibleTextRendering = $True
-	#$buttonRUN.UseVisualStyleBackColor = $True
-	#$buttonRUN.add_Click($buttonRUN_Click)
-	#
 
 	# radiobuttonAutoruns
 	#
 	$radiobuttonAutoruns.Location = '50, 90'
 	$radiobuttonAutoruns.Name = 'radiobuttonAutoruns'
 	$radiobuttonAutoruns.Size = '104, 24'
-	$radiobuttonAutoruns.TabIndex = 2
 	$radiobuttonAutoruns.TabStop = $True
 	$radiobuttonAutoruns.Text = 'Autoruns'
 	$radiobuttonAutoruns.UseCompatibleTextRendering = $True
@@ -325,7 +309,6 @@ function Show-IR_psf {
 	$radiobuttonEventLogs.Location = '170, 90'
 	$radiobuttonEventLogs.Name = 'radiobuttonEventLogs'
 	$radiobuttonEventLogs.Size = '104, 24'
-	$radiobuttonEventLogs.TabIndex = 4
 	$radiobuttonEventLogs.TabStop = $True
 	$radiobuttonEventLogs.Text = 'Event Logs'
 	$radiobuttonEventLogs.UseCompatibleTextRendering = $True
@@ -339,7 +322,6 @@ function Show-IR_psf {
 	$radiobuttonNetlogon.Location = '320, 90'
 	$radiobuttonNetlogon.Name = 'radiobuttonNetlogon'
 	$radiobuttonNetlogon.Size = '104, 24'
-	# $radiobuttonNetlogon.TabIndex = 3
 	$radiobuttonNetlogon.TabStop = $True
 	$radiobuttonNetlogon.Text = 'Netlogon'
 	$radiobuttonNetlogon.UseCompatibleTextRendering = $True
@@ -351,7 +333,6 @@ function Show-IR_psf {
 	$radiobuttonDrivers.Location = '460, 90'
 	$radiobuttonDrivers.Name = 'radiobuttonNetlogon'
 	$radiobuttonDrivers.Size = '104, 24'
-	# $radiobuttonDrivers.TabIndex = 3
 	$radiobuttonDrivers.TabStop = $True
 	$radiobuttonDrivers.Text = 'Drivers'
 	$radiobuttonDrivers.UseCompatibleTextRendering = $True
@@ -363,7 +344,6 @@ function Show-IR_psf {
 	$radiobuttonMapped_Drives.Location = '580, 90'
 	$radiobuttonMapped_Drives.Name = 'radiobuttonNetlogon'
 	$radiobuttonMapped_Drives.Size = '104, 24'
-	# $radiobuttonMapped_Drives.TabIndex = 3
 	$radiobuttonMapped_Drives.TabStop = $True
 	$radiobuttonMapped_Drives.Text = 'Mapped_Drives'
 	$radiobuttonMapped_Drives.UseCompatibleTextRendering = $True
@@ -375,7 +355,6 @@ function Show-IR_psf {
 	$radiobuttonProcess.Location = '690, 90'
 	$radiobuttonProcess.Name = 'radiobuttonNetlogon'
 	$radiobuttonProcess.Size = '104, 24'
-	# $radiobuttonProcess.TabIndex = 3
 	$radiobuttonProcess.TabStop = $True
 	$radiobuttonProcess.Text = 'Process'
 	$radiobuttonProcess.UseCompatibleTextRendering = $True
@@ -387,7 +366,6 @@ function Show-IR_psf {
 	$radiobuttonScheduled_Tasks.Location = '50, 150'
 	$radiobuttonScheduled_Tasks.Name = 'radiobuttonNetlogon'
 	$radiobuttonScheduled_Tasks.Size = '104, 24'
-	# $radiobuttonScheduled_Tasks.TabIndex = 3
 	$radiobuttonScheduled_Tasks.TabStop = $True
 	$radiobuttonScheduled_Tasks.Text = 'Scheduled_Tasks'
 	$radiobuttonScheduled_Tasks.UseCompatibleTextRendering = $True
@@ -399,7 +377,6 @@ function Show-IR_psf {
 	$radiobuttonServices.Location = '170, 150'
 	$radiobuttonServices.Name = 'radiobuttonNetlogon'
 	$radiobuttonServices.Size = '104, 24'
-	# $radiobuttonServices.TabIndex = 3
 	$radiobuttonServices.TabStop = $True
 	$radiobuttonServices.Text = 'Services'
 	$radiobuttonServices.UseCompatibleTextRendering = $True
@@ -411,7 +388,6 @@ function Show-IR_psf {
 	$radiobuttonEnvironment_Variables.Location = '320, 150'
 	$radiobuttonEnvironment_Variables.Name = 'radiobuttonNetlogon'
 	$radiobuttonEnvironment_Variables.Size = '104, 24'
-	# $radiobuttonEnvironment_Variables.TabIndex = 3
 	$radiobuttonEnvironment_Variables.TabStop = $True
 	$radiobuttonEnvironment_Variables.Text = 'Environment_Variables'
 	$radiobuttonEnvironment_Variables.UseCompatibleTextRendering = $True
@@ -425,7 +401,6 @@ function Show-IR_psf {
 	$radiobuttonSoftware.Location = '460, 150'
 	$radiobuttonSoftware.Name = 'radiobuttonNetlogon'
 	$radiobuttonSoftware.Size = '104, 24'
-	# $radiobuttonSoftware.TabIndex = 3
 	$radiobuttonSoftware.TabStop = $True
 	$radiobuttonSoftware.Text = 'Software'
 	$radiobuttonSoftware.UseCompatibleTextRendering = $True
@@ -437,7 +412,6 @@ function Show-IR_psf {
 	$radiobuttonUsers.Location = '580, 150'
 	$radiobuttonUsers.Name = 'radiobuttonNetlogon'
 	$radiobuttonUsers.Size = '104, 24'
-	# $radiobuttonUsers.TabIndex = 3
 	$radiobuttonUsers.TabStop = $True
 	$radiobuttonUsers.Text = 'Users'
 	$radiobuttonUsers.UseCompatibleTextRendering = $True
@@ -449,7 +423,6 @@ function Show-IR_psf {
 	$radiobuttonGroups.Location = '690, 150'
 	$radiobuttonGroups.Name = 'radiobuttonNetlogon'
 	$radiobuttonGroups.Size = '104, 24'
-	# $radiobuttonGroups.TabIndex = 3
 	$radiobuttonGroups.TabStop = $True
 	$radiobuttonGroups.Text = 'Groups'
 	$radiobuttonGroups.UseCompatibleTextRendering = $True
@@ -461,7 +434,6 @@ function Show-IR_psf {
 	$radiobuttonLogged_on_User.Location = '50, 200'
 	$radiobuttonLogged_on_User.Name = 'radiobuttonNetlogon'
 	$radiobuttonLogged_on_User.Size = '104, 24'
-	# $radiobuttonLogged_on_User.TabIndex = 3
 	$radiobuttonLogged_on_User.TabStop = $True
 	$radiobuttonLogged_on_User.Text = 'Logged_on_User'
 	$radiobuttonLogged_on_User.UseCompatibleTextRendering = $True
@@ -474,7 +446,6 @@ function Show-IR_psf {
 	$radiobuttonNetwork_Configs.Location = '170, 200'
 	$radiobuttonNetwork_Configs.Name = 'radiobuttonNetlogon'
 	$radiobuttonNetwork_Configs.Size = '104, 24'
-	# $radiobuttonNetwork_Configs.TabIndex = 3
 	$radiobuttonNetwork_Configs.TabStop = $True
 	$radiobuttonNetwork_Configs.Text = 'Network_Configs'
 	$radiobuttonNetwork_Configs.UseCompatibleTextRendering = $True
@@ -486,7 +457,6 @@ function Show-IR_psf {
 	$radiobuttonShares.Location = '320, 200'
 	$radiobuttonShares.Name = 'radiobuttonNetlogon'
 	$radiobuttonShares.Size = '104, 24'
-	# $radiobuttonShares.TabIndex = 3
 	$radiobuttonShares.TabStop = $True
 	$radiobuttonShares.Text = 'Shares'
 	$radiobuttonShares.UseCompatibleTextRendering = $True
@@ -498,7 +468,6 @@ function Show-IR_psf {
 	$radiobuttonDisk.Location = '460, 200'
 	$radiobuttonDisk.Name = 'radiobuttonNetlogon'
 	$radiobuttonDisk.Size = '104, 24'
-	# $radiobuttonDisk.TabIndex = 3
 	$radiobuttonDisk.TabStop = $True
 	$radiobuttonDisk.Text = 'Disk'
 	$radiobuttonDisk.UseCompatibleTextRendering = $True
@@ -511,7 +480,6 @@ function Show-IR_psf {
 	$radiobuttonSystem_Info.Location = '580, 200'
 	$radiobuttonSystem_Info.Name = 'radiobuttonNetlogon'
 	$radiobuttonSystem_Info.Size = '104, 24'
-	# $radiobuttonSystem_Info.TabIndex = 3
 	$radiobuttonSystem_Info.TabStop = $True
 	$radiobuttonSystem_Info.Text = 'System_Info'
 	$radiobuttonSystem_Info.UseCompatibleTextRendering = $True
@@ -523,7 +491,6 @@ function Show-IR_psf {
 	$radiobuttonPatches.Location = '690, 200'
 	$radiobuttonPatches.Name = 'radiobuttonNetlogon'
 	$radiobuttonPatches.Size = '104, 24'
-	# $radiobuttonPatches.TabIndex = 3
 	$radiobuttonPatches.TabStop = $True
 	$radiobuttonPatches.Text = 'Patches'
 	$radiobuttonPatches.UseCompatibleTextRendering = $True

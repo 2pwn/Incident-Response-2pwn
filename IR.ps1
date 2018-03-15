@@ -80,7 +80,7 @@ function Show-IR_psf {
 		Get-WmiObject -Class win32_scheduledjob -ComputerName $computers | select PSComputername, Name, Owner, JodID, Command, RunRepeatedly, InteractWithDesktop | Export-CSV .\Scheduled_Tasks.csv -NoTypeInformation
 		Get-WmiObject -Class win32_service -ComputerName $computers | select PSComputername, ProcessID, Name, Description, PathName, Started, StartMode, StartName, State | Export-CSV .\Services.csv -NoTypeInformation
 		Get-WmiObject -Class win32_environment -ComputerName $computers | select PSComputername, UserName, Name, VariableValue | Export-CSV .\Environment_Variables.csv -NoTypeInformation
-		Get-WmiObject -Class win32_useraccount -ComputerName $computers | select PSComputername, accounttype, name, fullname, domain, disabled, localaccount, lockout, passwordchangeable, passwordexpires, sid | Export-CSV .\Users.csv -NoTypeInformation
+		Get-WmiObject -Class win32_useraccount -ComputerName $computers -Filter "LocalAccount='True'" | select PSComputername, accounttype, name, fullname, domain, disabled, localaccount, lockout, passwordchangeable, passwordexpires, sid | Export-CSV .\Users.csv -NoTypeInformation
 		Get-WmiObject -Class win32_group -ComputerName $computers | select PSComputername, Caption, Domain, Name, Sid | Export-CSV .\Groups.csv -NoTypeInformation
 		Get-WmiObject -Class win32_computersystem -ComputerName $computers | select PSComputername, Username | Export-CSV .\Logged_on_User.csv -NoTypeInformation
 		Get-WmiObject -Class win32_networkadapterconfiguration -ComputerName $computers | select PSComputername, IPAddress, IPSubnet, DefaultIPGateway, DHCPServer, DNSHostname, DNSserversearchorder, MACAddress, description | Export-CSV .\Network_Configs.csv -NoTypeInformation
@@ -165,7 +165,7 @@ function Show-IR_psf {
 	$radiobuttonUsers_CheckedChanged={
 		#TODO: Place custom script here
 		$computers = $textbox1.Text
-		Get-WmiObject -Class win32_useraccount -ComputerName $computers | select PSComputername, accounttype, name, fullname, domain, disabled, localaccount, lockout, passwordchangeable, passwordexpires, sid | Export-CSV .\Users.csv -NoTypeInformation
+		Get-WmiObject -Class win32_useraccount -ComputerName $computers -Filter "LocalAccount='True'" | select PSComputername, accounttype, name, fullname, domain, disabled, localaccount, lockout, passwordchangeable, passwordexpires, sid | Export-CSV .\Users.csv -NoTypeInformation
 
 	}
 

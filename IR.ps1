@@ -288,7 +288,7 @@ function Show-IR_psf {
 	$form1.AutoScaleMode = 'Font'
 	$form1.ClientSize = '822, 316'
 	$form1.Name = 'form1'
-	$form1.Text = 'Form'
+	$form1.Text = 'Incident Response Agent'
 	$form1.add_Load($form1_Load)
 
 	$Label.Location= '300, 250'

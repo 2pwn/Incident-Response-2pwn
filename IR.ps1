@@ -10,13 +10,6 @@
 function Show-IR_psf {
 
 	#----------------------------------------------
-	#region Import the Assemblies
-	#----------------------------------------------
-	[void][reflection.assembly]::Load('System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a')
-	[void][reflection.assembly]::Load('System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089')
-	#endregion Import Assemblies
-
-	#----------------------------------------------
 	#region Generated Form Objects
 	#----------------------------------------------
 	[System.Windows.Forms.Application]::EnableVisualStyles()
